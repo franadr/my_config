@@ -26,7 +26,6 @@ return {
 
                 -- rebase always
                 vim.keymap.set("n", "<leader>P", function()
-                    print("Executing PULL --rebase")
                     vim.cmd.Git({'pull',  '--rebase'})
                 end, opts)
 

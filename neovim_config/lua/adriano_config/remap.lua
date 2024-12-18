@@ -36,3 +36,9 @@ end)
 
 -- Show/hide the nvim tree pane
 vim.keymap.set('n', "<leader>pv","<cmd>NvimTreeToggle<CR>")
+
+-- for the real hardcore vimers: disable the arrow keys
+vim.keymap.set("n","<up>","<nop>")
+vim.keymap.set("n","<down>","<nop>")
+vim.keymap.set("n","<left>","<nop>")
+vim.keymap.set("n","<right>","<nop>")

@@ -19,6 +19,9 @@ return {
         end
         require("nvim-tree").setup({
             on_attach = my_on_attach,
+            modified = {
+                enable = true,
+            },
             sort = {
                 sorter = "case_sensitive",
             },
@@ -27,9 +30,14 @@ return {
             },
             renderer = {
                 group_empty = true,
+                highlight_modified= 'all',
+                icons = {
+                    modified_placement = 'before',
+                }
             },
             filters = {
-                dotfiles = true,
+                dotfiles = false,
+                git_ignored = false,
             },
         })    end
 }

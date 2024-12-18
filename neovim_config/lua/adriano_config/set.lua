@@ -1,3 +1,8 @@
+-- Vim builtin global settings - Adriano FRANCI
+--
+-- Updates window title with current opened file
+vim.opt.title = true
+
 -- Line numbers
 vim.opt.nu = true
 vim.opt.relativenumber = true
@@ -10,7 +15,7 @@ vim.opt.expandtab = true
 
 vim.opt.smartindent = true
 
-vim.opt.wrap = false
+vim.opt.wrap = true
 
 -- no swap files but instead keep history of the changes in the targeted dir, i.e. for undotree
 vim.opt.swapfile = false
@@ -36,6 +41,7 @@ vim.opt.updatetime = 50
 
 local autocmd = vim.api.nvim_create_autocmd
 
+
 autocmd("BufWritePre", {
     pattern = "*.go",
     callback = function()
@@ -59,3 +65,9 @@ autocmd("BufWritePre", {
     end
 })
 
+-- trick to force *.tf to be interpreted as terraform files
+vim.filetype.add({
+  extension = {
+    tf = "terraform"
+  }
+})

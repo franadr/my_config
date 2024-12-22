@@ -5,9 +5,9 @@ return {
         require("nvim-treesitter.configs").setup({
             -- A list of parser names, or "all"
             ensure_installed = {
-                "vimdoc", "javascript", "typescript", "c", "lua", "rust",
-                "jsdoc", "bash", "dockerfile","go"
+                "vimdoc", "c", "lua", "bash", "dockerfile","go","markdown","vim"
             },
+            ignore_install = {},
 
             -- Install parsers synchronously (only applied to `ensure_installed`)
             sync_install = false,

@@ -24,7 +24,7 @@ The neovim settings are the various configuration values and autocommands that I
 
 ## Neovim Shortcuts
 
-The shortcuts are split among plugin specific shortcuts and vim global shortcuts. Their specification can be foudn respectively in [lua/plugins/*](https://github.com/franadr/my_config/blob/main/neovim_config/lua/remap.lua) and [lua/remap.lua](https://github.com/franadr/my_config/blob/main/neovim_config/lua/remap.lua).
+The shortcuts are split among plugin specific shortcuts and vim global shortcuts. Their specification can be foudn respectively in [lua/plugins/*](https://github.com/franadr/my_config/tree/main/neovim_config/lua/plugins) and [lua/remap.lua](https://github.com/franadr/my_config/blob/main/neovim_config/lua/remap.lua).
 
 ### Neovim global shortcuts
 

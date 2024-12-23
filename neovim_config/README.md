@@ -2,7 +2,7 @@
 
 ## Neovim settings
 
-The neovim settings are the various configuration values and autocommands that I have juged usefull to include. Those do not relate to plugin directly but might impact plugins behaviour if they rely on global config.
+The neovim settings are the various configuration values and autocommands that I have juged usefull to include. Those do not relate to plugin directly but might impact plugins behaviour if they rely on global config. These settings can be found in `lua/set.lua`.
 
 - Pressing `<Esc>` when searching (i.e. `/`) will clear highlight.
 - The yanked selection will blink on yank.
@@ -24,7 +24,7 @@ The neovim settings are the various configuration values and autocommands that I
 
 ## Neovim Shortcuts
 
-The shortcuts are split among plugin specific shortcuts and vim global shortcuts. Their speciication can be foudn respectively in `lua/plugins/PLUGIN_NAME.lua` and `lua/remap.lua`.
+The shortcuts are split among plugin specific shortcuts and vim global shortcuts. Their specification can be foudn respectively in `lua/plugins/PLUGIN_NAME.lua` and `lua/remap.lua`.
 
 ### Neovim global shortcuts
 

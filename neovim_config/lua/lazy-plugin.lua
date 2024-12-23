@@ -14,7 +14,8 @@ require('lazy').setup({
     require 'plugins.undotree',
     require 'plugins.treesitter',
     require 'plugins.colors',
-    require 'plugins.lualine'
+    require 'plugins.lualine',
+    require 'plugins.fugitive'
 })
 
 -- Array of available schemes

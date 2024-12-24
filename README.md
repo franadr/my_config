@@ -55,7 +55,9 @@ The neovim settings are the various configuration values and autocommands that I
 The aim of this configuration is to allow a seemless coding experience, this section should help you reach that smooth experience.
 ### Workflows
 
-#### Open projet root folder
+#### File explorer and Git
+
+##### Open projet root folder
 Usually the project source code and related files are contained within a folder. To start Neovim within that folder, simply move there and start neovim. This should open neovim with the file explorer pane open at the root of the project.
 To open a file, navigate the tree and press `<CR>` (enter).
 ```bash
@@ -63,7 +65,7 @@ To open a file, navigate the tree and press `<CR>` (enter).
 > nvim .
 ```
 
-#### Saving and reviewing changes
+##### Saving and reviewing changes
 After editing, the file can be saved and the changes can be reviewed directly within git window.\
 1. Save with `:w` or save and close with `ZZ` (x2 capital "z")
 2. Open _fugitive_ window, default is `<leaded>gs` 
@@ -71,13 +73,27 @@ After editing, the file can be saved and the changes can be reviewed directly wi
 4. Press `=` to show inline diff
 5. _Alternatively_ use `dv` to open a vertical split with the left pane being the HEAD version and the right pane the currentversion
 
-#### Staging, commiting and push
+##### Staging, commiting and push
 Once the changes are satisfactory, the changes can be staged, commited and pushed to the remote repository.
 1. Open _fugitive_ with `<leader>gs`
 2. Move cursor over the unstaged files
 3. Press `s` to stage the file(s) (you can have multiple selection by using visual mode to include multiple files)
 4. Press `cc` to commit, this opens a commit message window, when done press `ZZ` to close and commit
 5. Once commited press `<leader>p` to push. (The process might take 1s to show results down the terminal window)
+
+#### Navigate code and diagnostic
+
+##### Find references of a symbol
+As most IDE the LSP integration of NeoVim allows you to find references of a symbol :
+1. Move over the symbol you would like to find ref over
+2. In normal mode, press `gr` ([g]o to [r]eference)
+3. A prompt will allow you to selecte the file and line with symbol occurence.
+4. Press <CR> to jump there. (`<C-o>` brings you back to your previous location)
+
+##### Go to the definition of a symbol
+You can jump to the definition of a symbol :
+1. Moved cursor over the symbol you are looking for
+2. In normal mode, press `gd` ([g]o to [d]efinition) to jump to the definition of that symbol
 
 ### Neovim Shortcuts
 

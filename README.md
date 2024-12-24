@@ -1,6 +1,14 @@
 # My Neovim config
 
 This is a custom Neovim configuration highly (sollely) inspired by the various good practices and guides available on internet. This configuration focuses on bringing a pleasant coding and scripting experience in neovim while keeping configuration transparent with (almost) all settings motivated and provided in lua scripting language.
+## Main inspiration
+
+Here is a list of the main source I have stolen ideas from :
+- _video_ [Primeagen 'Vim as your editor' series](https://www.youtube.com/playlist?list=PLm323Lc7iSW_wuxqmKx_xxNtJC_hJbQ7R)
+- _video_ [typecraft nvim intro](https://www.youtube.com/watch?v=zHTeCSVAFNY)
+- _repo_ [nvim kickstart](https://github.com/nvim-lua/kickstart.nvim)
+- _doc_ [lua nvim ref](https://neovim.io/doc/user/lua.html)
+-
 
 ## Highlights
 
@@ -80,6 +88,7 @@ Once the changes are satisfactory, the changes can be staged, commited and pushe
 3. Press `s` to stage the file(s) (you can have multiple selection by using visual mode to include multiple files)
 4. Press `cc` to commit, this opens a commit message window, when done press `ZZ` to close and commit
 5. Once commited press `<leader>p` to push. (The process might take 1s to show results down the terminal window)
+6. Press `gq` (fu[g]itive [q]uit) to close _fugitive_ window.
 
 #### Navigate code and diagnostic
 

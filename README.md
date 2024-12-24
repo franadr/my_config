@@ -1,5 +1,29 @@
 # My Neovim config
 
+This is a custom Neovim configuration highly (sollely) inspired by the various good practices and guides available on internet. This configuration focuses on bringing a pleasant coding and scripting experience in neovim while keeping configuration transparent with (almost) all settings motivated and provided in lua scripting language.
+
+## Highlights
+
+This configuration will allow a seemless coding experience through the following features:
+- Code diagnostic
+- Automatic code formating for supported languages
+- File explorer window with custom highlighting for buffer and git related status.
+- Code completion through automatic Language server Protocol configuration
+- Git integration with a dedicated Git window and convenient shortcuts and panes for conflict resolution
+- Language specific code highlighting
+- Customizable theme 
+
+## Prerequisites
+
+- NeoVim tested with `v0.10.2`
+- Git `2.39.3`
+- Nerdfonts installation [nerdfonts.com](https://www.nerdfonts.com/)
+- gcc and libstdc++
+- curl
+- [ripgrep](https://github.com/BurntSushi/ripgrep) (multithreaded and more understandable verison of _grep_)
+- [fd](https://github.com/sharkdp/fd) (simple fast alternative of _find_)
+- [fzf](https://github.com/junegunn/fzf) (cli fuzzy finder)
+
 ## Neovim settings
 
 The neovim settings are the various configuration values and autocommands that I have juged usefull to include. Those do not relate to plugin directly but might impact plugins behaviour if they rely on global config. These settings can be found in [lua/set.lua](https://github.com/franadr/my_config/blob/main/neovim_config/lua/set.lua).

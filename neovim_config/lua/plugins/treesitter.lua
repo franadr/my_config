@@ -42,5 +42,6 @@ return {
         }
 
         vim.treesitter.language.register("templ", "templ")
+        require 'nvim-treesitter.install'.compilers = { "clang", "gcc" }
     end
 }

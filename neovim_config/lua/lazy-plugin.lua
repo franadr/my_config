@@ -6,22 +6,22 @@ function SetColorScheme(color)
     vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 end
 
-require('lazy').setup({
-    require 'plugins.telescope',
-    require 'plugins.lspconfig',
-    require 'plugins.completion',
-    require 'plugins.nvimtree',
-    require 'plugins.undotree',
-    require 'plugins.treesitter',
-    require 'plugins.colors',
-    require 'plugins.lualine',
-    require 'plugins.fugitive'
+require("lazy").setup({
+    require("plugins.telescope"),
+    require("plugins.lspconfig"),
+    require("plugins.completion"),
+    require("plugins.nvimtree"),
+    require("plugins.undotree"),
+    require("plugins.treesitter"),
+    require("plugins.colors"),
+    require("plugins.lualine"),
+    require("plugins.fugitive"),
 })
 
 -- Array of available schemes
 AvailableColorSchemes = {
     "catppuccin",
-    "tokyonight"
+    "tokyonight",
 }
 -- Selection of the scheme
 local selectedScheme = AvailableColorSchemes[0]

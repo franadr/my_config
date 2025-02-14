@@ -19,11 +19,13 @@ require 'set'
 -- [[ remaps ]]
 require 'remap'
 
--- [[ Install `lazy.nvim` plugin manager ]]
-require 'lazy-init'
+if ! vim.g.vscode then
+   -- [[ Install `lazy.nvim` plugin manager ]]
+   require 'lazy-init'
+   -- [[ Configure and install plugins ]]
+   require 'lazy-plugin'
+end
 
--- [[ Configure and install plugins ]]
-require 'lazy-plugin'
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=3 et

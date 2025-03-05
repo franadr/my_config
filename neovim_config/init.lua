@@ -19,7 +19,7 @@ require 'set'
 -- [[ remaps ]]
 require 'remap'
 
-if ! vim.g.vscode then
+if not vim.g.vscode then
    -- [[ Install `lazy.nvim` plugin manager ]]
    require 'lazy-init'
    -- [[ Configure and install plugins ]]

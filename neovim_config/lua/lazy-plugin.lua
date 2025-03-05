@@ -16,6 +16,7 @@ require("lazy").setup({
     require("plugins.colors"),
     require("plugins.lualine"),
     require("plugins.fugitive"),
+    require("plugins.vim_gutter"),
 })
 
 -- Array of available schemes

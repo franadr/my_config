@@ -6,6 +6,8 @@ function SetColorScheme(color)
     vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 end
 
+-- Lazy loading of plugins
+
 require("lazy").setup({
     require("plugins.telescope"),
     require("plugins.lspconfig"),
@@ -16,7 +18,11 @@ require("lazy").setup({
     require("plugins.colors"),
     require("plugins.lualine"),
     require("plugins.fugitive"),
-    require("plugins.vim_gutter"),
+    -- require("plugins.vim_gutter"),
+    require("plugins.copilot"),
+    require("plugins.gitsigns"),
+    require("plugins.autopairs"),
+    require("plugins.indent_line"),
 })
 
 -- Array of available schemes

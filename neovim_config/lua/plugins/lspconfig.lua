@@ -173,14 +173,23 @@ return {
             },
           },
         },
+        helm_ls = {
+          settings = {
+            ['helm-ls'] = {
+              yamlls = {
+                path = "yaml-language-server",
+              }
+            }
+          }
+        }
       }
 
-      vim.api.nvim_create_autocmd({"BufWritePre"}, {
-                pattern = { "*.tf", "*.tfvars", "*.go", "*.lua"},
-                callback = function()
-                    vim.lsp.buf.format()
-                end,
-            })
+      vim.api.nvim_create_autocmd({ "BufWritePre" }, {
+        pattern = { "*.tf", "*.tfvars", "*.go", "*.lua" },
+        callback = function()
+          vim.lsp.buf.format()
+        end,
+      })
 
       -- Ensure the servers and tools above are installed
       --  To check the current status of installed tools and/or manually install
@@ -204,6 +213,7 @@ return {
         handlers = {
           function(server_name)
             local server = servers[server_name] or {}
+            -- :print(string.format("Using server config : %s:[%s]", server_name, server['settings']))
             -- This handles overriding only values explicitly passed
             -- by the server configuration above. Useful when disabling
             -- certain features of an LSP (for example, turning off formatting for ts_ls)

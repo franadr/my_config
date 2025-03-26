@@ -3,12 +3,12 @@ return {
     dependencies = {
         "nvim-tree/nvim-web-devicons",
     },
-    config = function ()
+    config = function()
         local function my_on_attach(bufnr)
             local api = require "nvim-tree.api"
 
             -- Open Nvim tree with //
-            vim.keymap.set('n', "//","<cmd>NvimTreeToggle<CR>",{desc="Open Nvim-tree"})
+            vim.keymap.set('n', "\\", "<cmd>NvimTreeToggle<CR>", { desc = "Open Nvim-tree" })
 
             local function opts(desc)
                 return { desc = "nvim-tree: " .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
@@ -18,7 +18,7 @@ return {
             api.config.mappings.default_on_attach(bufnr)
 
             -- custom mappings
-            vim.keymap.set('n', '?', api.tree.toggle_help, opts('Help'),{desc="Toggle nvim tree help"})
+            vim.keymap.set('n', '?', api.tree.toggle_help, opts('Help'), { desc = "Toggle nvim tree help" })
         end
 
         require("nvim-tree").setup({
@@ -35,7 +35,7 @@ return {
             },
             renderer = {
                 group_empty = true,
-                highlight_modified= 'all',
+                highlight_modified = 'all',
                 icons = {
                     modified_placement = 'before',
                 }
@@ -45,6 +45,6 @@ return {
                 dotfiles = false,
                 git_ignored = false,
             },
-        })    end
+        })
+    end
 }
-

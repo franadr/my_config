@@ -73,7 +73,18 @@ vim.opt.updatetime = 250
 
 -- trick to force *.tf to be interpreted as terraform files
 vim.filetype.add({
-  extension = {
-    tf = "terraform"
-  }
+    extension = {
+        tf = "terraform"
+    }
+})
+
+-- start bash lsp
+vim.api.nvim_create_autocmd('FileType', {
+    pattern = '*sh',
+    callback = function()
+        vim.lsp.start({
+            name = 'bash-language-server',
+            cmd = { 'bash-language-server', 'start' },
+        })
+    end,
 })

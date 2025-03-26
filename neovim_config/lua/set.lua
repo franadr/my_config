@@ -52,6 +52,12 @@ vim.opt.smartindent = true
 
 vim.opt.wrap = true
 
+-- highlight the current line
+vim.opt.cursorline = true
+
+-- show confirmation when closing unsaved buffer
+vim.opt.confirm = true
+
 -- no swap files but instead keep history of the changes in the targeted dir, i.e. for undotree
 vim.opt.swapfile = false
 vim.opt.backup = false

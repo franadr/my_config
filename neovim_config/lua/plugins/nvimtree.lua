@@ -7,8 +7,11 @@ return {
         local function my_on_attach(bufnr)
             local api = require "nvim-tree.api"
 
-            -- Open Nvim tree with //
+            -- Toggle Nvim tree with \
             vim.keymap.set('n', "\\", "<cmd>NvimTreeToggle<CR>", { desc = "Open Nvim-tree" })
+
+            -- Highlight current buffer in nvim tree
+            vim.keymap.set('n', "<leader>e", "<cmd>NvimTreeFindFile<CR>", { desc = "Find file in Nvim-tree" })
 
             local function opts(desc)
                 return { desc = "nvim-tree: " .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
@@ -23,6 +26,9 @@ return {
 
         require("nvim-tree").setup({
             on_attach = my_on_attach,
+            update_focused_file = {
+                enable = true,
+            },
             modified = {
                 -- Mark files modifed while buffer not saved yet
                 enable = true,
@@ -36,6 +42,8 @@ return {
             renderer = {
                 group_empty = true,
                 highlight_modified = 'all',
+                highlight_opened_files = 'name',
+                highlight_git = 'all',
                 icons = {
                     modified_placement = 'before',
                 }
@@ -44,6 +52,7 @@ return {
                 -- show all (hidden and git ignored)
                 dotfiles = false,
                 git_ignored = false,
+                custom = { ".*\\.DS_STORE" }
             },
         })
     end

@@ -19,7 +19,7 @@ require("lazy").setup({
     require("plugins.lualine"),
     require("plugins.fugitive"),
     -- require("plugins.vim_gutter"),
-    require("plugins.copilot"),
+    -- require("plugins.copilot"),
     require("plugins.gitsigns"),
     require("plugins.autopairs"),
     require("plugins.indent_line"),

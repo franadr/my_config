@@ -37,6 +37,10 @@ CUSTOM SETTINGS
 
 --]]
 
+-- folding with treesitter
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+vim.opt.foldlevel = 99 -- Unfold all by default
 
 -- Line numbers
 vim.opt.number = true
@@ -80,7 +84,8 @@ vim.opt.updatetime = 250
 -- trick to force *.tf to be interpreted as terraform files
 vim.filetype.add({
     extension = {
-        tf = "terraform"
+        tf = "terraform",
+        hcl = "terraform"
     }
 })
 

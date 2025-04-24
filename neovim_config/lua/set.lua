@@ -89,6 +89,17 @@ vim.filetype.add({
     }
 })
 
+-- Change indentation space when writting terraform scripts
+vim.api.nvim_create_autocmd({ 'BufEnter' }, {
+    pattern = { '*.tf', '*.hcl' },
+    callback = function(ev)
+        vim.opt.tabstop = 2
+        vim.opt.softtabstop = 2
+        vim.opt.shiftwidth = 2
+        vim.opt.expandtab = true
+    end
+})
+
 -- start bash lsp
 vim.api.nvim_create_autocmd('FileType', {
     pattern = '*sh',

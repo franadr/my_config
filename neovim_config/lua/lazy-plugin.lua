@@ -1,6 +1,6 @@
 function SetColorScheme(color)
-    local defaultColor = "catppuccin"
-    color = color or defaultColor
+    -- local defaultColor = "catppuccin"
+    -- color = color or defaultColor
     vim.cmd.colorscheme(color)
     vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
     vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
@@ -29,7 +29,9 @@ require("lazy").setup({
 AvailableColorSchemes = {
     "catppuccin",
     "tokyonight",
+    "github_light_colorblind",
+    "github_light_default"
 }
 -- Selection of the scheme
-local selectedScheme = AvailableColorSchemes[0]
+local selectedScheme = AvailableColorSchemes[3]
 SetColorScheme(selectedScheme)

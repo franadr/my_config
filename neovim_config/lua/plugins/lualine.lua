@@ -4,7 +4,7 @@ return {
     config = function()
         require('lualine').setup({
             options = {
-                theme = 'solarized_dark',
+                theme = 'github_light_colorblind',
                 section_separators = { left = '', right = '' },
                 component_separators = { left = '', right = '' }
             },

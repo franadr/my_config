@@ -1,0 +1,7 @@
+font-family = "JetBrainsMono Nerd Font"
+font-style = "semiBold"
+font-size = 14
+
+background-opacity = 0.90
+background-blur = true
+theme = light:fran_light,dark:Github-Dark-Dimmed

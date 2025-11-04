@@ -163,6 +163,10 @@ automatically-unhide-macos-hidden-apps = false
     # Custom bindings for apps
     alt-b = "exec-and-forget open ~"
 
+    alt-enter = 'exec-and-forget open -n /Applications/Ghostty.app'
+
+
+
 # 'service' binding mode declaration.
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
 [mode.service.binding]
@@ -192,7 +196,7 @@ automatically-unhide-macos-hidden-apps = false
     run = ['layout floating']
 
 [[on-window-detected]]
-    if.app-id = 'com.googlecode.iterm2'
+    if.app-id = 'com.mitchellh.ghostty'
     run = ['move-node-to-workspace 2']
 
 [[on-window-detected]]
@@ -203,6 +207,3 @@ automatically-unhide-macos-hidden-apps = false
     if.app-id = 'com.DanPristupov.Fork'
     run = ['layout floating']
 
-[[on-window-detected]]
-    if.app-id = 'org.mozilla.firefox'
-    run = ['move-node-to-workspace 1']

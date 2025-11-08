@@ -185,7 +185,7 @@ return {
       }
 
       vim.api.nvim_create_autocmd({ "BufWritePre" }, {
-        pattern = { "*.tf", "*.tfvars", "*.go", "*.lua" },
+        pattern = { "*.tf", "*.tfvars", "*.go", "*.lua", "*.py" },
         callback = function()
           vim.lsp.buf.format()
         end,
@@ -206,6 +206,18 @@ return {
         'stylua', -- Used to format Lua code
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
+      vim.lsp.config('pylsp', {
+        settings = {
+          pylsp = {
+            plugins = {
+              pycodestyle = {
+                ignore = { 'W391' },
+                maxLineLength = 120
+              }
+            }
+          }
+        }
+      })
 
       require('mason-lspconfig').setup {
         ensure_installed = {},
@@ -218,6 +230,7 @@ return {
             -- by the server configuration above. Useful when disabling
             -- certain features of an LSP (for example, turning off formatting for ts_ls)
             server.capabilities = vim.tbl_deep_extend('force', {}, capabilities, server.capabilities or {})
+            print(server)
             require('lspconfig')[server_name].setup(server)
           end,
         },
